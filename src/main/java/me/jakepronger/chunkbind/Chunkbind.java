@@ -29,6 +29,7 @@ public class Chunkbind extends JavaPlugin {
 
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
+        WorldBorder border = new WorldBorder();
         //player.setWorldBorder();
     }
 
