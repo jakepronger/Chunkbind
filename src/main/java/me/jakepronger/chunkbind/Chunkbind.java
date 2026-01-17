@@ -1,6 +1,5 @@
 package me.jakepronger.chunkbind;
 
-import me.jakepronger.chunkbind.listeners.PlayerJoin;
 import me.jakepronger.spine.Spine;
 import me.jakepronger.spine.managers.RegistryManager;
 import org.bukkit.entity.Player;
@@ -15,14 +14,12 @@ public class Chunkbind extends JavaPlugin {
 
     @Override
     public void onEnable() {
-
         instance = this;
         spine = new Spine(instance);
 
         registry = spine.getRegistry();
 
         registry.listener(PlayerJoinEvent.class, this::onJoin);
-
     }
 
     @Override
@@ -32,7 +29,7 @@ public class Chunkbind extends JavaPlugin {
 
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
-        player.setWorldBorder();
+        //player.setWorldBorder();
     }
 
 }
